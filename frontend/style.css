@@ -47,11 +47,11 @@ section {
   border-radius: 5px;
 }
 
-.list-tips {
-  margin: 1em 0;
-  padding: 1em;
+.tips {
+  margin: 2em 0;
+  padding: 2em;
   background-color: #e8f4f8;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 footer {

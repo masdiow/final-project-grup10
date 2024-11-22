@@ -1,0 +1,24 @@
+<script>
+  function calculateEfficiency() {
+      const innovationType = document.getElementById('innovationType').value;
+      const production = document.getElementById('production').value;
+      let efficiency = 0;
+
+      switch(innovationType) {
+          case 'automation':
+              efficiency = production * 1.4; // 40% increase
+              break;
+          case 'renewable':
+              efficiency = production * 1.25; // 25% increase
+              break;
+          case 'waste':
+              efficiency = production * 1.3; // 30% increase
+              break;
+          default:
+              efficiency = production;
+      }
+
+      document.getElementById('result').innerHTML =
+          Estimasi Peningkatan Produksi: ${Math.round(efficiency - production)} unit/hari;
+  }
+</script>
