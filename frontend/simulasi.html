@@ -30,29 +30,55 @@
           <option value="renewable">Energi Terbarukan</option>
           <option value="waste">Manajemen Limbah</option>
         </select>
-<<<<<<< HEAD
+        <!--HEAD-->
         <br /><br />
-=======
-        <br><br>
->>>>>>> 946b63ff747d4d162fd36eb745656e77bfe2071f
+        <br /><br />
         <label for="production">Kapasitas Produksi (unit/hari):</label>
         <input
           type="number"
           placeholder="Masukkan Kapasitas Produksi"
           id="production"
         />
-<<<<<<< HEAD
-        <br /><br />
-=======
-        <br><br>
->>>>>>> 946b63ff747d4d162fd36eb745656e77bfe2071f
         <button onclick="calculateEfficiency()">Hitung Efisiensi</button>
         <p id="result"></p>
       </div>
     </section>
 
     <script>
-<<<<<<< HEAD
+      <<<<<<< HEAD
+                    function calculateEfficiency() {
+                // Ambil nilai input
+                const innovationType = document.getElementById('innovationType').value;
+                const production = parseInt(document.getElementById('production').value);
+
+                // Validasi input
+                if (!innovationType || !production) {
+                    document.getElementById('result').textContent = 'Mohon pilih jenis inovasi dan masukkan kapasitas produksi!';
+                    return;
+                }
+
+                let efficiency;
+
+                // Proses perhitungan berdasarkan jenis inovasi
+                switch (innovationType) {
+                    case 'automation':
+                        efficiency = production * 1.2; // Otomatisasi meningkatkan 20% efisiensi
+                        break;
+                    case 'renewable':
+                        efficiency = production * 1.15; // Energi terbarukan meningkatkan 15% efisiensi
+                        break;
+                    case 'waste':
+                        efficiency = production * 1.1; // Manajemen limbah meningkatkan 10% efisiensi
+                        break;
+                    default:
+                        efficiency = production;
+                        break;
+                }
+
+                // Tampilkan hasil perhitungan
+                document.getElementById('result').textContent = Dengan inovasi ${innovationType}, efisiensi produksi Anda adalah ${efficiency.toFixed(2)} unit/hari.;
+            }
+
               function calculateEfficiency() {
           // Ambil nilai input
           const innovationType = document.getElementById('innovationType').value;
@@ -83,45 +109,9 @@
           }
 
           // Tampilkan hasil perhitungan
-          document.getElementById('result').textContent = Dengan inovasi ${innovationType}, efisiensi produksi Anda adalah ${efficiency.toFixed(2)} unit/hari.;
+          document.getElementById('result').textContent = `Dengan inovasi ${innovationType}, efisiensi produksi Anda adalah ${efficiency.toFixed(2)} unit/hari.`;
       }
-=======
-        function calculateEfficiency() {
-    // Ambil nilai input
-    const innovationType = document.getElementById('innovationType').value;
-    const production = parseInt(document.getElementById('production').value);
-
-    // Validasi input
-    if (!innovationType || !production) {
-        document.getElementById('result').textContent = 'Mohon pilih jenis inovasi dan masukkan kapasitas produksi!';
-        return;
-    }
-
-    let efficiency;
-
-    // Proses perhitungan berdasarkan jenis inovasi
-    switch (innovationType) {
-        case 'automation':
-            efficiency = production * 1.2; // Otomatisasi meningkatkan 20% efisiensi
-            break;
-        case 'renewable':
-            efficiency = production * 1.15; // Energi terbarukan meningkatkan 15% efisiensi
-            break;
-        case 'waste':
-            efficiency = production * 1.1; // Manajemen limbah meningkatkan 10% efisiensi
-            break;
-        default:
-            efficiency = production;
-            break;
-    }
-
-    // Tampilkan hasil perhitungan
-    document.getElementById('result').textContent = `Dengan inovasi ${innovationType}, efisiensi produksi Anda adalah ${efficiency.toFixed(2)} unit/hari.`;
-}
-
->>>>>>> 946b63ff747d4d162fd36eb745656e77bfe2071f
     </script>
-
     <footer>
       <p>&copy; 2024 Edukasi Industri Inovatif</p>
     </footer>
