@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industri Inovatif - SDG #9</title>
+    <style>
+      /* CSS Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* Navigation */
+      nav {
+        background: #1a73e8;
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          #1a73e8;
+        color: white;
+        padding: 8rem 2rem 4rem;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Main Content */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .section {
+        margin: 4rem 0;
+      }
+
+      .section h2 {
+        color: #1a73e8;
+        margin-bottom: 2rem;
+      }
+
+      /* Company Profiles */
+      .company-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .company-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1.5rem;
+        transition: transform 0.3s;
+      }
+
+      .company-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Innovation Simulator */
+      .simulator {
+        background: #f5f5f5;
+        padding: 2rem;
+        border-radius: 8px;
+      }
+
+      .simulator input,
+      .simulator select {
+        width: 100%;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+      }
+
+      .simulator button {
+        background: #1a73e8;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      /* Tips Section */
+      .tips-list {
+        list-style: none;
+      }
+
+      .tips-list li {
+        background: #f8f9fa;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-left: 4px solid #1a73e8;
+        border-radius: 0 4px 4px 0;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .container {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="profil.html">Profil Perusahaan</a></li>
+        <li><a href="#simulator">Simulator Inovasi</a></li>
+        <li><a href="tips.html">Tips Berkelanjutan</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" id="beranda">
+      <h1>Industri Inovatif untuk Masa Depan Berkelanjutan</h1>
+      <p>Mewujudkan SDG #9: Industri, Inovasi dan Infrastruktur</p>
+    </section>
+
+    <div class="container">
+      <section class="section" id="profil">
+        <h2>Profil Perusahaan Inovatif</h2>
+        <div class="company-grid">
+          <div class="company-card">
+            <h3>Green Tech Solutions</h3>
+            <p>Pelopor teknologi pengolahan limbah industri dengan sistem AI</p>
+            <p>Dampak: Pengurangan limbah 70%</p>
+          </div>
+          <div class="company-card">
+            <h3>Smart Factory Indo</h3>
+            <p>Implementasi IoT untuk optimasi produksi</p>
+            <p>Dampak: Efisiensi meningkat 45%</p>
+          </div>
+          <div class="company-card">
+            <h3>Eco Manufacturing</h3>
+            <p>Pionir manufaktur berbasis energi terbarukan</p>
+            <p>Dampak: Emisi karbon berkurang 50%</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="simulator">
+        <h2>Simulator Inovasi Industri</h2>
+        <div class="simulator">
+          <h3>Kalkulator Efisiensi Produksi</h3>
+          <select id="innovationType">
+            <option value="">Pilih Jenis Inovasi</option>
+            <option value="automation">Otomatisasi</option>
+            <option value="renewable">Energi Terbarukan</option>
+            <option value="waste">Manajemen Limbah</option>
+          </select>
+          <input
+            type="number"
+            placeholder="Kapasitas Produksi (unit/hari)"
+            id="production"
+          />
+          <button onclick="calculateEfficiency()">Hitung Efisiensi</button>
+          <p id="result"></p>
+        </div>
+      </section>
+
+      <section class="section" id="tips">
+        <h2>Tips Membangun Industri Berkelanjutan</h2>
+        <ul class="tips-list">
+          <li>
+            Implementasi sistem manajemen energi untuk mengoptimalkan penggunaan
+            listrik
+          </li>
+          <li>Penggunaan bahan baku ramah lingkungan dan dapat didaur ulang</li>
+          <li>
+            Penerapan teknologi smart monitoring untuk mencegah pemborosan
+          </li>
+          <li>Pengembangan program pelatihan karyawan berkelanjutan</li>
+        </ul>
+      </section>
+    </div>
+
+    <script>
+      function calculateEfficiency() {
+          const innovationType = document.getElementById('innovationType').value;
+          const production = document.getElementById('production').value;
+          let efficiency = 0;
+
+          switch(innovationType) {
+              case 'automation':
+                  efficiency = production * 1.4; // 40% increase
+                  break;
+              case 'renewable':
+                  efficiency = production * 1.25; // 25% increase
+                  break;
+              case 'waste':
+                  efficiency = production * 1.3; // 30% increase
+                  break;
+              default:
+                  efficiency = production;
+          }
+
+          document.getElementById('result').innerHTML =
+              Estimasi Peningkatan Produksi: ${Math.round(efficiency - production)} unit/hari;
+      }
+    </script>
+  </body>
+</html>

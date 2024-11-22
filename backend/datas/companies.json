@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Gojek",
+    "desc": "Gojek is a technology-driven super app in Indonesia offering a range of services including ride-hailing, food delivery, digital payments, and logistics."
+  },
+  {
+    "id": 2,
+    "name": "Tokopedia",
+    "desc": "Tokopedia is a leading e-commerce platform in Indonesia that allows businesses and individuals to buy and sell products, offering a range of categories from electronics to everyday essentials."
+  },
+  {
+    "id": 3,
+    "name": "Bukalapak",
+    "desc": "Bukalapak is one of the largest e-commerce platforms in Indonesia, focusing on empowering small and medium-sized enterprises (SMEs) to sell products online."
+  },
+  {
+    "id": 4,
+    "name": "Traveloka",
+    "desc": "Traveloka is an Indonesian travel and lifestyle platform that offers a wide variety of services, including booking flights, hotels, train tickets, and activities."
+  },
+  {
+    "id": 5,
+    "name": "PLN (Perusahaan Listrik Negara)",
+    "desc": "PLN is the state-owned electricity company in Indonesia that is responsible for the generation, distribution, and retail of electricity across the country."
+  },
+  {
+    "id": 6,
+    "name": "SpaceX",
+    "desc": "SpaceX is a private aerospace manufacturer and space transportation company founded by Elon Musk, aiming to reduce the cost of space travel and enable the colonization of Mars."
+  },
+  {
+    "id": 7,
+    "name": "Nvidia",
+    "desc": "Nvidia is a technology company best known for its graphics processing units (GPUs) for gaming and artificial intelligence applications, and also provides solutions for deep learning and autonomous vehicles."
+  },
+  {
+    "id": 8,
+    "name": "Apple",
+    "desc": "Apple is a leading global technology company known for its innovative consumer electronics, including the iPhone, iPad, MacBook, and software ecosystem including iOS and macOS."
+  },
+  {
+    "id": 9,
+    "name": "Amazon",
+    "desc": "Amazon is an American multinational technology company that started as an online bookstore and has grown into one of the world’s largest e-commerce platforms, cloud computing service providers, and entertainment producers."
+  },
+  {
+    "id": 10,
+    "name": "Tesla",
+    "desc": "Tesla is an electric vehicle and clean energy company founded by Elon Musk, known for producing electric cars, solar energy solutions, and energy storage products."
+  }
+]

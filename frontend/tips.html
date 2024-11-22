@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tips Keberlanjutan - Inovasi Industri</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Website Edukasi Industri Inovatif</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil Perusahaan</a></li>
+          <li><a href="simulasi.html">Simulasi Inovasi</a></li>
+          <li><a href="tips.html">Tips Keberlanjutan</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Tips Membangun Industri Berkelanjutan</h2>
+      <ul id="list-tips">
+        <li>Gunakan teknologi hemat energi di setiap proses produksi.</li>
+        <li>Pertimbangkan untuk menggunakan bahan baku ramah lingkungan.</li>
+        <li>Investasi dalam inovasi untuk mengurangi jejak karbon.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Edukasi Industri Inovatif</p>
+    </footer>
+    <script>
+      // Function to fetch data from the backend
+      async function fetchData() {
+        const API_URL = "http://localhost:3000/api/tips"; // Change this to your backend URL
+
+        try {
+          const response = await fetch(API_URL);
+          const data = await response.json();
+          displayData(data.data);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+          document.getElementById("data").textContent = "Failed to load data.";
+        }
+      }
+      function displayData(data) {
+        const dataUl = document.getElementById("list-tips");
+        dataUl.innerHTML = ""; // Clear previous data
+        data.forEach((tips) => {
+          const li = document.createElement("li");
+          li.classList.add("tips");
+          li.textContent = tips.name;
+
+          const h3 = document.createElement("h3");
+          h3.textContent = tips.desc;
+
+          const p = document.createElement("p");
+          p.textContent = tips.benefit;
+
+          dataUl.appendChild(li);
+          dataUl.appendChild(h3);
+          dataUl.appendChild(p);
+        });
+      }
+      // Fetch data when the DOM is fully loaded
+      document.addEventListener("DOMContentLoaded", fetchData);
+    </script>
+  </body>
+</html>
